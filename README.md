@@ -1,8 +1,7 @@
-# Your startup name here
+# Operation Ryugaku Ninja 
 
 [My Notes](notes.md)
-
-A brief description of the application here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Recently, Japanese companies have made tons of money helping Japanese students come overseas to study English. The services that they provide are nothing special !! Helping them find houses, editing their essays, etc…. However, students can do this themselves with facebook marketplace and chatGPT. One particular company has been offering these innately free and easy actions at an absurd price, creating a financial barrier for students to access this educational opportunity. I am going to do something about this !!!
 
 
 > [!NOTE]
@@ -18,21 +17,21 @@ A brief description of the application here. Lorem ipsum dolor sit amet, consect
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] Proper use of Markdown
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Recently, there has been a increase in Japanese "study abroad assistant" companies offering to help place students in different parts of the world. One comapny that targets students coming to Utah is charging 13,500 USD per person (with normal exhange rates, it would be more like 20,000 USD)! They don't do anything special. Help them find houses and edit their essays for them, maybe go for a few company tours. However, the company is becoming increasingly selfish with their pricing and services. I want to provide all of the information they provide for free !! From how to find houses to what prompts to put into AI editing tools for editing application essays. Let's help make education more accessible to those who want it.  
 
 ### Design
 
-![Design image](placeholder.png)
+![Design image](Design.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The main idea is to have a webiste that looks similar to a FAQ page. 
 
 ```mermaid
 sequenceDiagram

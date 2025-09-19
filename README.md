@@ -31,31 +31,25 @@ Recently, there has been a increase in Japanese "study abroad assistant" compani
 
 ![Design image](Design.png)
 
-The main idea is to have a webiste that looks similar to a FAQ page. 
-
-```mermaid
-sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
-```
+The main idea is to have a webiste that looks similar to a FAQ page. There will be a list of frequently asked questions, but through inputting a keyword, they can get to their desired information faster than scrolling. Another big part of this website is the ability to follow along with images or videos. For example, a series of images explaining how to find houses on facebook marketplace. 
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- A toggle feature to expand different sections of information 
+- A text input feature to help search their desired information 
+- images of different types of apartments 
+- login/logout/create an account if they desire more personalised help with essay and other functions
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - 2 HTML pages, one for information, the second one to create an account
+- **CSS** - An easy to follow flow for the user, paying special attention to creating a phone-friendly layout
+- **React** - Using react mainly to compartamentalise information for the toggle feature. Also provides login function and structure for the keyword serarch. 
+- **Service** - login/logout and retreiving images for overall aesthetic use
+- **DB/Login** - storing user information, register and login users. Store clicks -> lsit questions in most frequently clicked on question ?
+- **WebSocket** - Display number of users registered and receiving assistance. 
 
 ## 🚀 AWS deliverable
 

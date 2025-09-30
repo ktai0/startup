@@ -64,9 +64,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **HTML pages** - Completed linking and basic structure of all needed HTML pages
 - [x] **Proper HTML element usage** - Used HTML tags including BODY, NAV, MAIN, HEADER, FOOTER on all pages
 - [x] **Links** - Succesfully linked all needed pages, and even linked a logo with the homepage
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
+- [x] **Text** - Finished the instructions and texts for the homepage and housing page
+- [x] **3rd party API placeholder** - Goal: embedding google maps, but made a div for it. 
+- [x] **Images** - Implemented a logo at the header of each website
 - [ ] **Login placeholder** - I did not complete this part of the deliverable.
 - [ ] **DB data placeholder** - I did not complete this part of the deliverable.
 - [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.

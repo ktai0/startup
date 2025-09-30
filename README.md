@@ -67,9 +67,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Text** - Finished the instructions and texts for the homepage and housing page
 - [x] **3rd party API placeholder** - Goal: embedding google maps, but made a div for it. 
 - [x] **Images** - Implemented a logo at the header of each website
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **Login placeholder** - There is a login/ creating an account portion at the bottom of the homepage
+- [x] **DB data placeholder** - Login data shown at the "nubmer of people helped" statistic below the login placeholder
+- [x] **WebSocket placeholder** - reflects realtime communication at the "number of people helped" statistic below the login placeholder 
 
 ## 🚀 CSS deliverable
 

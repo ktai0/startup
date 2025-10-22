@@ -40,8 +40,7 @@ innermost box (content)-> padding (background colour) -> border (colour, thickne
 
 
 
-SELECTORS
-
+### css-SELECTORS
 Element type selector 
 whole sections, eg: body, h1, etc
 
@@ -68,10 +67,36 @@ section:hover{xyz}
 
 
 
-DECLARATIONS
+### css-DECLARATIONS
 specify changes when selector matches 
 units -> px, pt (1/72 of inch), in, cm, %, em, rem, ex, vw, vh, vmin, vmax
 colour -> keyword, rgb hex, rgb function, hsl, 
+
+### css-fonts
+serif -little stroke attached 
+sans-serif -> no stroke
+
+importing fonts
+@font-face {font-family: 'quicksand';src:url(...');}
+
+@import url('....')
+p{font-family: 'name'}
+
+### css-Animation 
+1) define the animation name & duration 
+  p{text:.... font:.... animation-name:... animation-duration: xs;}
+2) define keyframes 
+  @keyframes (animation-name) {
+    from{
+      font-size: 0vh;
+    }
+    to {
+      font-size:20vh; 
+    }
+  }
+
+### CSS debugging
+  html page element -> inspect 
 
 Vue, Svelte -> Combines HTML, CSS, JavaScript into a single file 
 but Svelte needs a compiler, but Vue doesn't
@@ -80,7 +105,6 @@ React -> combines Javascript and HTML
 css must be declared out side JSX file 
 
 Angular Component -> seperate files, chose when to combine 
-
 
 This took a couple hours to get it how I wanted. It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
 
@@ -170,7 +194,7 @@ Which of the following are true? (mark all that are true about the DOM)
 By default, the HTML span element has a default CSS display property value of: 
 How would you use CSS to change all the div elements to have a background color of red?
 How would you display an image with a hyperlink in HTML?
-In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
+In the CSS box model, what is the ordering of the box layers starting at the inside and working out? 
 Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?
 What will the following code output when executed using a for loop and console.log?
 How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?

@@ -26,6 +26,7 @@ there are a ton of aria tags (e.g. aria-expanded = whether it is in a state of e
 Cascading Style Sheets -> transforms HTML into an experience 
 rules -> selector -> declarations -> property -> property value 
 rule = p(selector){colour(property):(declaration) green (value);}
+there are inherited and non-inherited declarations
 
 Three ways to apply CSS
 1) style 
@@ -98,6 +99,82 @@ p{font-family: 'name'}
 ### CSS debugging
   html page element -> inspect 
 
+### Responsive design 
+changes display for desktops, mobile phones, kiosks, etc... 
+
+1. Display property 
+html -> div class ="xyz"    css -> .xyz{display: xyz}
+xyz= 
+1) none -> dont display 
+2) block -> fill parent element width 
+3) inline -> as big as its content (e.g # of char)
+4) flex -> element's children in flexible orientation 
+5) grid -> element's children in grid orientation 
+
+2. meta tag 
+Do not scale -> 
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+3. Float 
+arrange element to left or right in proportion to another element
+e.g. wrap text around picture, moves when display parameters changes.
+
+4. Media 
+automatically detects size of webpage and coonsults css rules to change 
+@media (orientaton: xyz){ div{ transform:...;}}
+boolean 
+
+### CSS - GRID
+helps with responsive grids 
+html -> <div class="parentElement"> ..... </div>
+css -> .parentElement{ 
+  display: grid;
+  grid-template-columns: repeat (auto-fill, minmax(300px,1fr)(layout of grid columns) 
+  grid-auto-rows: height of row 
+  grid-gap: ... 
+}
+
+
+### CSS-flexbox
+compartamentalization of website so it moves around eachother as the web size changes 
+display: flex;
+
+justify-content -> align the content horizontally within box 
+align-content -> align the content veritcally within box
+
+
+### CSS-frameworks
+set package of css rules through open source 
+
+1) Tailwind 
+  smaller definitions applied to individual HTML elements
+  moves css rules out of css file and into HTML
+
+2) Bootstrap
+  CDN + add HTML link + Bootstrap javascript module a the end of body 
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  </head>
+  <body>
+    ...
+  </body>
+</html>
+
+if need javascript 
+<body>
+  ...
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+// Bootstrap styled button
+<button type="button" class="btn btn-primary">Bootstrap</button>
+
+// Default browser styled button
+<button type="button">Plain</button>
 Vue, Svelte -> Combines HTML, CSS, JavaScript into a single file 
 but Svelte needs a compiler, but Vue doesn't
 

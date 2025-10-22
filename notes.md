@@ -23,6 +23,33 @@ target = -none -> open on a different page
 there are a ton of aria tags (e.g. aria-expanded = whether it is in a state of expanded or not)
 
 ## CSS
+Cascading Style Sheets -> transforms HTML into an experience 
+rules -> selector -> declarations -> property -> property value 
+rule = p(selector){colour(property):(declaration) green (value);}
+
+Three ways to apply CSS
+1) style 
+    <p style="colour:green"> CSS</p>
+2) style element in head element of document -> apply to whole document 
+    <head><style> p {color: green;} </style></head>
+3) HTML syntax <link> *
+hyperlink reference to an external file with css rules
+must be in head element of document 
+
+innermost box (content)-> padding (background colour) -> border (colour, thickness and line style)-> margin 
+
+Element type selector 
+
+
+
+Vue, Svelte -> Combines HTML, CSS, JavaScript into a single file 
+but Svelte needs a compiler, but Vue doesn't
+
+React -> combines Jacascript and HTML
+css must be declared out side JSX file 
+
+Angular Component -> seperate files, chose when to combine 
+
 
 This took a couple hours to get it how I wanted. It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
 

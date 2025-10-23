@@ -226,6 +226,30 @@ I also used SVG to make the icon and logo for the app. This turned out to be a p
 </svg>
 ```
 
+## Javascript
+most used language, goes through interpreter
+
+console.log -> print function 
+console.log('hello'+' '+'world') -> hello world 
+
+### adding to HTML
+1) script block: <script></script> write code between script
+2) external code: reference external file <script src='xyz'></script>
+3) inline event attribute: create script first, and then use content in an inline piece of code
+
+### Node
+one language to run all of your server
+1. Create your project directory
+2. Initialize it for use with NPM by running npm init -y
+3. Make sure .gitignore file contains node_modules
+4. Install any desired packages with npm install <package name here>
+5. Add require('<package name here>') to your application's JavaScript
+6. Use the code the package provides in your JavaScript
+7. Run your code with node index.js
+
+### Debugging Node
+frequent console.log functions
+
 ## React Part 1: Routing
 
 Setting up Vite and React was pretty simple. I had a bit of trouble because of conflicting CSS. This isn't as straight forward as you would find with Svelte or Vue, but I made it work in the end. If there was a ton of CSS it would be a real problem. It sure was nice to have the code structured in a more usable way.

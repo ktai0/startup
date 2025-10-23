@@ -175,56 +175,6 @@ if need javascript
 
 // Default browser styled button
 <button type="button">Plain</button>
-Vue, Svelte -> Combines HTML, CSS, JavaScript into a single file 
-but Svelte needs a compiler, but Vue doesn't
-
-React -> combines Javascript and HTML
-css must be declared out side JSX file 
-
-Angular Component -> seperate files, chose when to combine 
-
-This took a couple hours to get it how I wanted. It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
-
-Bootstrap seems a bit like magic. It styles things nicely, but is very opinionated. You either do, or you do not. There doesn't seem to be much in between.
-
-I did like the navbar it made it super easy to build a responsive header.
-
-```html
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand">
-            <img src="logo.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
-            Calmer
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="play.html">Play</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Logout</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-```
-
-I also used SVG to make the icon and logo for the app. This turned out to be a piece of cake.
-
-```html
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100" height="100" fill="#0066aa" rx="10" ry="10" />
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="72" font-family="Arial" fill="white">C</text>
-</svg>
-```
 
 ## Javascript
 most used language, goes through interpreter
@@ -232,12 +182,124 @@ most used language, goes through interpreter
 console.log -> print function 
 console.log('hello'+' '+'world') -> hello world 
 
+JavaScript console -> JS debugger console 
+Log's the outputs
+times the run time of code 
+count how many times a block of code is called
+
+### Functions
+zero or more parameters 
+zero or more return statements 
+no type declarations 
+
+function labeler(value, title = 'title') {
+  console.log(`${title}=${value}`);
+}
+labeler();
+// OUTPUT: title=undefined
+labeler('fish');
+// OUTPUT: title=fish
+labeler('fish', 'animal');
+// OUTPUT: animal=fish
+
+anonymous functions -> no name functions 
+const add = function (a, b) {
+  return a + b;
+};
+
+### arrow function 
+=> is the function keyword 
+
+const a = [1, 2, 3, 4];
+
+// standard function syntax
+a.sort(function (v1, v2) {
+  return v1 - v2;
+});
+
+// arrow function syntax
+a.sort((v1, v2) => v1 - v2);
+
+if no curly braces -> no need for return keyword
+
+closure ???
+
+### array 
+The Array object has several interesting static functions associated with it. Here are some of the interesting ones.
+
+| Function | Meaning                                                   | Example                       |
+| -------- | --------------------------------------------------------- | ----------------------------- |
+| push     | Add an item to the end of the array                       | `a.push(4)`                   |
+| pop      | Remove an item from the end of the array                  | `x = a.pop()`                 |
+| slice    | Return a sub-array                                        | `a.slice(1,-1)`               |
+| sort     | Run a function to sort an array in place                  | `a.sort((a,b) => b-a)`        |
+| values   | Creates an iterator for use with a `for of` loop          | `for (i of a.values()) {...}` |
+| find     | Find the first item satisfied by a test function          | `a.find(i => i < 2)`          |
+| forEach  | Run a function on each array item                         | `a.forEach(console.log)`      |
+| reduce   | Run a function to reduce each array item to a single item | `a.reduce((a, c) => a + c)`   |
+| map      | Run a function to map an array to a new array             | `a.map(i => i+i)`             |
+| filter   | Run a function to remove items                            | `a.filter(i => i%2)`          |
+| every    | Run a function to test if all items match                 | `a.every(i => i < 3)`         |
+| some     | Run a function to test if any items match                 | `a.some(i => i < 1)`          |
+
+
+### OBJECT 
+A JavaScript object represents a collection of name value pairs referred to as properties. The property name must be of type String or Symbol, but the value can be of any type. Objects also have common object-oriented functionality such as constructors, a this pointer, static properties and functions, and inheritance.
+
+Objects can be created with the new operator.
+
+Any function that returns an object is considered a constructor and can be invoked with the new operator.
+function Person(name) {
+  return {
+    name: name,
+  };
+}
+
+const p = new Person('Eich');
+console.log(p);
+// OUTPUT: {name: 'Eich'}
+
+inheritence 
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  print() {
+    return 'My name is ' + this.name;
+  }
+}
+
+class Employee extends Person {
+  constructor(name, position) {
+    super(name);
+    this.position = position;
+  }
+
+  print() {
+    return super.print() + '. I am a ' + this.position;
+  }
+}
+
+const e = new Employee('Eich', 'programmer');
+console.log(e.print());
+// OUTPUT: My name is Eich. I am a programmer
+
+
+### JSON
+JSON provides a simple, and yet effective way, to share and store data. By design JSON is easily convertible to, and from, JavaScript objects. This makes it a very convenient data format when working with web technologies. Because of its simplicity, standardization, and compatibility with JavaScript, JSON has become one of the world's most popular data formats.
+
+
+Most commonly, a JSON document contains an object. Objects contain zero or more key value pairs. The key is always a string, and the value must be one of the valid JSON data types. Key value pairs are delimited with commas. Curly braces delimit an object, square brackets and commas delimit arrays, and strings are always delimited with double quotes.
+
+You can convert JSON to, and from, JavaScript using the JSON.parse and JSON.stringify functions.
+
 ### adding to HTML
 1) script block: <script></script> write code between script
 2) external code: reference external file <script src='xyz'></script>
 3) inline event attribute: create script first, and then use content in an inline piece of code
 
-### Node
+## Node
 one language to run all of your server
 1. Create your project directory
 2. Initialize it for use with NPM by running npm init -y
@@ -250,9 +312,70 @@ one language to run all of your server
 ### Debugging Node
 frequent console.log functions
 
+## web frameworks 
+Vue, Svelte -> Combines HTML, CSS, JavaScript into a single file 
+but Svelte needs a compiler, but Vue doesn't
+
+React -> combines Javascript and HTML
+css must be declared out side JSX file 
+
+Angular Component -> seperate files, chose when to combine 
+
+## Toolchains
+Code repository - shared code 
+Linter - makes the code properly formated, effecient 
+Prettier - Formats code according to a shared standard.
+Transpiler - Compiles code into a different format. For example, from JSX to JavaScript, TypeScript to JavaScript, or SCSS to CSS.
+Polyfill - Generates backward compatible code for supporting old browser versions that do not support the latest standards.
+Bundler - Packages code into bundles for delivery to the browser. This enables compatibility (for example with ES6 module support), or performance (with lazy loading).
+Minifier - Removes whitespace and renames variables in order to make code smaller and more efficient to deploy.
+Testing - Automated tests at multiple levels to ensure correctness.
+Deployment - Automated packaging and delivery of code from the development environment to the production environment.
+
+vite is a tool chain pack ?
+
+## components 
+JSX -> takes react, return and inserts into HTML
+modularise back end code to represent front end compartments 
+generate user interface -> JSX
+rendering JSX -> through funciton or even through inline 
+
 ## React Part 1: Routing
 
-Setting up Vite and React was pretty simple. I had a bit of trouble because of conflicting CSS. This isn't as straight forward as you would find with Svelte or Vue, but I made it work in the end. If there was a ton of CSS it would be a real problem. It sure was nice to have the code structured in a more usable way.
+Helps make what would be a multi page hmtl file set up, into a seamless one page html user experience. Basicallya compartamentalise the content, so content loads different times, but the headers/footers don't reload. 
+
+function Page({ color }) {
+  return (
+    <div className="page" style={{ backgroundColor: color }}>
+      <h1>{color}</h1>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="app">
+        <nav>
+          <NavLink to="/">Red</NavLink>
+          <NavLink to="/green">Green</NavLink>
+          <NavLink to="/blue">Blue</NavLink>
+        </nav>
+
+        <main>
+          <Routes>
+            <Route path="/" element={<Page color="red" />} exact />
+            <Route path="/green" element={<Page color="green" />} />
+            <Route path="/blue" element={<Page color="blue" />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 
 ## React Part 2: Reactivity
 
@@ -260,7 +383,7 @@ This was a lot of fun to see it all come together. I had to keep remembering to 
 
 Handling the toggling of the checkboxes was particularly interesting.
 
-```jsx
+```jsx -> allows for html like markups even in javascript
 <div className="input-group sound-button-container">
   {calmSoundTypes.map((sound, index) => (
     <div key={index} className="form-check form-switch">
@@ -282,36 +405,101 @@ Handling the toggling of the checkboxes was particularly interesting.
 
 #Midterm
 In the following code, what does the link element do?
+  link references ? URL ?
 In the following code,  what does a div tag do?
+  creates a division element in the html 
 In the following code, what is the difference between the #title and .grid selector?
+  #title references an ID, .grid references class 
 In the following code, what is the difference between padding and margin?
+  padding is the space inside the border, margin is the space outside the border 
 Given this HTML and this CSS how will the images be displayed using flex?
+  flex row -> in a line 
+  flex column -> up and down 
 What does the following padding CSS do?
+  creates space on top and bottom, and then left and right 
 What does the following code using arrow syntax function declaration do?
+  creates .... 
 What does the following code using map with an array output?
+  copies and mutates the array without changing original array 
 What does the following code output using getElementByID and addEventListener?
+  Typical pattern:
+  const btn = document.getElementById('btn');
+  btn.addEventListener('click', () => console.log('Clicked!'));
+  Behavior: When user clicks the element with id 'btn', the callback runs and prints 'Clicked!'.
 What does the following line of Javascript do using a # selector?
+  document.querySelector('#title') selects the first element that matches the CSS selector #title (elemequerySelector accepts any CSS selector (classes, attributes, pseudos).
 Which of the following are true? (mark all that are true about the DOM)
+  everything is a node in the DOM, document object model 
 By default, the HTML span element has a default CSS display property value of: 
+    inline
 How would you use CSS to change all the div elements to have a background color of red?
+    .div {background-color: red;}
 How would you display an image with a hyperlink in HTML?
+    <a href="https://example.com">
+    <img src="logo.png" alt="logo">
+    </a>
 In the CSS box model, what is the ordering of the box layers starting at the inside and working out? 
+  content, padding, border, margin 
 Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?
+  span
+  Given <p><span class="trouble">trouble</span> double</p>, use .trouble { color: green; }
 What will the following code output when executed using a for loop and console.log?
+
 How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?
+  const byu = document.getElementById('byu');
+  byu.style.color = 'green';
 What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?
+<p><ol><ul><h2><h1><h3>
 How do you declare the document type to be html?
+<!Doctype html>
 What is valid javascript syntax for if, else, for, while, switch statements?
+  if (x > 5) { ... } else { ... } for (...) { ... } while (...) { ... } switch (x) { case 1: ...; break; default: ... }
 What is the correct syntax for creating a javascript object?
+  const person = { name: "John", age: 30 };
 Is it possible to add new properties to javascript objects?
+  yes, person.city = "Provo";
 If you want to include JavaScript on an HTML page, which tag do you use?
+  <script src="script.js"></script>
 Given the following HTML, what JavaScript could you use to set the text "animal" to "crow" and leave the "fish" text unaffected?
+  <p id="animal">animal</p>
+  <p id="fish">fish</p>
+  
+  const animal = document.getElementById('animal');
+  animal.textContent = 'crow';
 Which of the following correctly describes JSON?
+  JSON (JavaScript Object Notation) is a text-based format for structured data using key-value pairs. Example: {
+  "name": "John", "age": 25 }
 What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
+  chmod -> change permission 
+  pwd -> print working directory 
+  cd -> chage directory 
+  ls -> list all files inside 
+  vim -> text editor 
+  nano -> text editor 
+  mkdir -> make directory 
+  mv-> move / rename
+  rm -> remove 
+  ssh -> remote shell
+  ps-> process
+  wget -> download files
+  sudo -> run as admin
 Which of the following console command creates a remote shell session?
+  ssh
 Which of the following is true when the -la parameter is specified for the ls console command?
+  list all files including hidden ones in a long format 
 Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?
+.click -> root domain.  
 Is a web certificate is necessary to use HTTPS.
+  yes
 Can a DNS A record can point to an IP address or another A record.
+  DNS points to IP address not A record 
 Port 443, 80, 22 is reserved for which protocol?
+  443 -> HTTPS, 80 -> HTTP, 22 -> SSH
 What will the following code using Promises output when executed?
+  Many possibilities depending on promise behavior. Examples:
+1) Promise.resolve('Done').then(console.log) -> 'Done'
+2) Promise.reject('Error').catch(console.error) -> 'Error'
+3) new Promise(res => setTimeout(() => res('Hi'),1000)).then(console.log) -> 'Hi' after 1s
+4) Async function returns value -> printed when awaited or .then
+5) Promise chain: Promise.resolve(2).then(x=>x*2).then(x=>x+1).then(console.log) -> 5
+6) Reject handled -> shows error via catch.

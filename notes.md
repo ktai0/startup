@@ -289,10 +289,63 @@ console.log(e.print());
 ### JSON
 JSON provides a simple, and yet effective way, to share and store data. By design JSON is easily convertible to, and from, JavaScript objects. This makes it a very convenient data format when working with web technologies. Because of its simplicity, standardization, and compatibility with JavaScript, JSON has become one of the world's most popular data formats.
 
-
 Most commonly, a JSON document contains an object. Objects contain zero or more key value pairs. The key is always a string, and the value must be one of the valid JSON data types. Key value pairs are delimited with commas. Curly braces delimit an object, square brackets and commas delimit arrays, and strings are always delimited with double quotes.
 
 You can convert JSON to, and from, JavaScript using the JSON.parse and JSON.stringify functions.
+
+### local storage 
+The browser's localStorage API provides the ability to persistently store and retrieve data (i.e. scores, usernames, etc.,) on a user's browser across user sessions and HTML page renderings. For example, your frontend JavaScript code could store a user's name on one HTML page, and then retrieve the name later when a different HTML page is loaded. The user's name will also be available in local storage the next time the same browser is used to access the same website.
+
+In addition to persisting application data between page renderings, localStorage is also used as a cache for when data cannot be obtained from the server. For example, your frontend JavaScript could store the last high scores obtained from the service, and then display those scores in the future if the service is not available.
+
+| Function             | Meaning                                      |
+| -------------------- | -------------------------------------------- |
+| setItem(name, value) | Sets a named item's value into local storage |
+| getItem(name)        | Gets a named item's value from local storage |
+| removeItem(name)     | Removes a named item from local storage      |
+| clear()              | Clears all items in local storage            |
+
+let user = 'Alice';
+
+let myObject = {
+  name: 'Bob',
+  info: {
+    favoriteClass: 'CS 260',
+    likesCS: true,
+  },
+};
+
+let myArray = [1, 'One', true];
+
+localStorage.setItem('user', user);
+localStorage.setItem('object', JSON.stringify(myObject));
+localStorage.setItem('array', JSON.stringify(myArray));
+
+console.log(localStorage.getItem('user'));
+console.log(JSON.parse(localStorage.getItem('object')));
+console.log(JSON.parse(localStorage.getItem('array')));
+
+Alice
+{name: 'Bob', info: {favoriteClass: 'CS 260', likesCS: true}
+[1, 'One', true]
+
+### destructuring 
+Destructuring, not to be confused with object destruction, is the process of pulling individual items out of an existing one, or removing structure. You can do this with either arrays or objects. This is helpful when you only care about a few items in the original structure. Destructuring is used extensively within React and so you will need to master this concept in order to build your startup.
+
+const a = [1, 2, 4, 5];
+
+// destructure the first two items from a, into the new variables b and c
+const [b, c] = a;
+
+console.log(b, c);
+// OUTPUT: 1, 2
+
+### promise 
+The rendering process of your HTML executes on a single thread. That means that you cannot take a long time processing JavaScript on the main rendering thread. Long running, or blocking tasks, should be executed with the use of a JavaScript Promise. The execution of a promise allows the main rendering thread to continue while some action is executed in the background. You create a promise by calling the Promise object constructor and passing it an executor function that runs the asynchronous operation. Executing asynchronously means that promise constructor may return before the promise executor function runs. The state of the promise execution is always in one of three possible states.
+
+pending - Currently running asynchronously
+fulfilled - Completed successfully
+rejected - Failed to complete
 
 ### adding to HTML
 1) script block: <script></script> write code between script

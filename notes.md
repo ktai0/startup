@@ -197,8 +197,10 @@ function labeler(value, title = 'title') {
 }
 labeler();
 // OUTPUT: title=undefined
+
 labeler('fish');
 // OUTPUT: title=fish
+
 labeler('fish', 'animal');
 // OUTPUT: animal=fish
 
